@@ -10,6 +10,9 @@ A tampermonkey script to auto search in Bing
 - Enable the Auto Bing Search in tampermonkey
 - Enjoy
 
+# Attention
+This script don't stop automatically, you need disable after usage
+
 # How to use for mobile search
 - Open console (ctrl + shift + i) and click in "Emulate devices" in top-left side
   
