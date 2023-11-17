@@ -153,10 +153,15 @@ function randomSearch(){
   return SEARCH_LIST[randomIndex];
 }
 
+function randomNumberInInterval(min, max){
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
 (async function() {
     'use strict';
 
-    const randomInterval = Math.floor(Math.random() * (SEARCH_INTERVAL[1] - SEARCH_INTERVAL[0] + 1)) + SEARCH_INTERVAL[0];
+    const [minInterval, maxInterval] = SEARCH_INTERVAL;
+    const randomInterval = randomNumberInInterval(minInterval, maxInterval);
     console.log(`Next in: ${randomInterval}ms`)
 
     await new Promise(resolve => setTimeout(resolve, randomInterval))
